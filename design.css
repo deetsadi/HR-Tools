@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"), url("../IBM-Plex-Sans/fonts/complete/woff2/IBMPlexSans-Bold.woff2") format("woff2"), url("../IBM-Plex-Sans/fonts/complete/woff/IBMPlexSans-Bold.woff") format("woff"); }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(211, 211, 211, 0.712);
+    
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'IBM Plex Sans';
+    font-weight: normal;
+    font-style: normal;
+
+}
+.headerLogo {
+    width: 25%;
+    float: left;
+}
+
+.logoImage {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 5%;
+}
+
+.header {
+    width:75%;
+    height: 100%;
+    float: left;
+    position: relative;
+   
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+ /* The sidebar menu */
+ .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    font-family: 'IBM Plex Sans';
+    border-bottom: solid grey;
+    border-top: solid grey;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    
+    padding-bottom: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } 
+
+  /*Nav Menu Button Styling*/
+  .navMenuButton {
+    font-size: 20px;
+    color: black;
+  }
+
+  .navMenuButton:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+    
+  }
+
+  .navMenuButton.active {
+    color:blue;
+  }
+
+  .navMenuButton.active p:hover {
+    color:blue;
+  }
+  /*-----------------------*/
+
+  /*Default hide all tabs*/
+  .tabcontent {
+    display: none;
+  }
+  /*---------------------*/
