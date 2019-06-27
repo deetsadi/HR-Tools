@@ -1,4 +1,94 @@
+<!DOCTYPE html>
+
 <html>
-    <style>
-    </style>
+    <head>
+        <!--Metadata-->
+        <meta charset="UTF-8">
+        <meta name="description" content="IBM IPCC HR Tool">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Matthew O'Connell">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!------------>
+        <link rel="stylesheet" href="design.css">
+        <title>IBM HR Tool</title>
+        <script src="tabs.js"></script>
+
+    </head>
+    <body>
+
+        <!--Header-->
+        <div class="row" style="border-bottom: solid black; height:100px; background-color: rgb(230, 227, 227);padding-top:none;">
+            <div class="headerLogo"> 
+                <img class="logoImage" src="images/ibmlogo.png">
+            </div>
+            <div class="header" >
+                <h1>IBM HR Attrition and Compensation Tool</h1>
+            </div>
+        </div>
+        <!---------->
+
+        <div class="row">
+            <!--Side Navigation Menu-->
+            <div class="col-2" style="border-right:solid black;" >
+                <div class="sidenav" style="text-align: justify;">
+                    <p class="navMenuButton" id="defaultOpen" onclick="openTab(event, 'Home')">Home</p>
+                    <p class="navMenuButton" onclick="openTab(event, 'Profiles')">Profiles</p>
+                    <p class="navMenuButton" onclick="openTab(event, 'Compensation')">Employee Compensation</p>
+                    <p class="navMenuButton" onclick="openTab(event, 'Attrition')">Employee Attrition</p>
+                </div>
+            </div>
+            <!------------------------>
+
+            <!--Home Tab-->
+            <div id="Home" class="tabcontent">
+                <div class="col-10" style="border: solid blue">
+                    <p>Home</p>
+                </div>
+                <div class="col-10" style="border: solid blue">
+                
+                </div>
+            </div>
+            <!------------>
+
+            <!--Profiles Tab-->
+            <div id="Profiles" class="tabcontent">
+                <div class="col-10" style="border: solid blue">
+                    <p>Profiles</p>
+                </div>
+                <div class="col-10" style="border: solid blue">
+                    
+                </div>
+            </div>
+            <!---------------->
+
+            <!--Profiles Tab-->
+            <div id="Compensation" class="tabcontent">
+                    <div class="col-10" style="border: solid blue">
+                        <p>Compensation</p>
+                    </div>
+                    <div class="col-10" style="border: solid blue">
+                        
+                    </div>
+                </div>
+            <!---------------->
+
+            <!--Profiles Tab-->
+            <div id="Attrition" class="tabcontent">
+                <div class="col-10" style="border: solid blue">
+                    <p>Attrition</p>
+                </div>
+                <div class="col-10" style="border: solid blue">
+                        
+                </div>
+                </div>
+            <!---------------->
+        </div>
+
+        <!--Open Home Tab-->
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script> 
+        <!----------------->
+    </body>
 </html>
