@@ -14,19 +14,26 @@ from sklearn import preprocessing
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+
+
 
 df = pd.read_csv(r'C:\Users\SEANKurian\Desktop\attritionSheet.csv')
-
 #Turning all values into scaled numbers
 df_encoded = df.apply(preprocessing.LabelEncoder().fit_transform)
 
 predictors = df_encoded.drop(columns=['Attrition'])
 target = df_encoded['Attrition'].values
 
+pred_train, pred_test, tar_train, tar_test = train_test_split(predictors, target, test_size=0.25, random_state=1)
 
-model = KNeighborsClassifier(n_neighbors=3)
-cv_scores = cross_val_score(model, predictors, target, cv=5)
+#Determines optimal number of neighbors 
+model = KNeighborsClassifier()
+param_grid = {'n_neighbors': np.arange(1, 25)}
+modelGSCV = GridSearchCV(model, param_grid, cv=5)
+modelGSCV.fit(pred_train, tar_train)
 
 
-print(cv_scores)
-print('cv_scores mean:{}'.format(np.mean(cv_scores)))
+#Optimal accuracy of ~84.6% is achieved with 20 neighbours
+print(modelGSCV.best_params_)
+print(modelGSCV.best_score_)
