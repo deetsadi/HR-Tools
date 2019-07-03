@@ -17,7 +17,7 @@ from sklearn.model_selection import GridSearchCV
 #Turning all values into scaled numbers after reading in a spreadsheet
 df = pd.read_csv(r'C:\Users\SEANKurian\Desktop\attritionSheet.csv')
 df_encoded = df.apply(preprocessing.LabelEncoder().fit_transform)
-df_encoded = df_encoded.drop(columns=['EmployeeCount', 'EmployeeNumber', 'Over18'])
+df_encoded = df_encoded.drop(columns=['EmployeeCount', 'EmployeeNumber', 'Over18', 'StandardHours'])
 
 predictors = df_encoded.drop(columns=['Attrition'])
 target = df_encoded['Attrition'].values
@@ -29,8 +29,11 @@ param_grid = {'n_neighbors': np.arange(1, 25)}
 modelGSCV = GridSearchCV(model, param_grid, cv=5)
 modelGSCV.fit(pred_train, tar_train)
 
-#Optimal accuracy of ~84.6% is achieved with 20 neighbours
+#Optimal accuracy of ~85.0% is achieved with 12 neighbours within the same set
 print(modelGSCV.best_params_)
 print(modelGSCV.best_score_)
 
+#When using the data we set aside for predictions and comparing to actual values, we find the prediction
+# is correct ~81.8% of the time
 print(modelGSCV.predict(pred_test))
+print(modelGSCV.score(pred_test,tar_test))
