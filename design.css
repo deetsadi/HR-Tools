@@ -114,11 +114,11 @@ h1 {
   }
 
   .navMenuButton.active {
-    color:blue;
+    color:darkblue;
   }
 
   .navMenuButton.active p:hover {
-    color:blue;
+    color:darkblue;
   }
   /*-----------------------*/
 

@@ -34,7 +34,6 @@
             <div class="col-2" style="border-right:solid black;" >
                 <div class="sidenav" style="text-align: justify;">
                     <p class="navMenuButton" id="defaultOpen" onclick="openTab(event, 'Home')">Home</p>
-                    <p class="navMenuButton" onclick="openTab(event, 'Profiles')">Profiles</p>
                     <p class="navMenuButton" onclick="openTab(event, 'Compensation')">Employee Compensation</p>
                     <p class="navMenuButton" onclick="openTab(event, 'Attrition')">Employee Attrition</p>
                 </div>
@@ -52,21 +51,16 @@
             </div>
             <!------------>
 
-            <!--Profiles Tab-->
-            <div id="Profiles" class="tabcontent">
-                <div class="col-10" style="border: solid blue">
-                    <p>Profiles</p>
-                </div>
-                <div class="col-10" style="border: solid blue">
-                    
-                </div>
-            </div>
-            <!---------------->
-
-            <!--Profiles Tab-->
+            <!--Compensation Tab-->
             <div id="Compensation" class="tabcontent">
                     <div class="col-10" style="border: solid blue">
-                        <p>Compensation</p>
+                        <form>
+                            First name:<br>
+                            <input type="text" name="firstname"><br>
+                            Last name:<br>
+                            <input type="text" name="lastname">
+                            
+                        </form>>
                     </div>
                     <div class="col-10" style="border: solid blue">
                         
@@ -74,7 +68,7 @@
                 </div>
             <!---------------->
 
-            <!--Profiles Tab-->
+            <!--Attrition Tab-->
             <div id="Attrition" class="tabcontent">
                 <div class="col-10" style="border: solid blue">
                     <p>Attrition</p>
