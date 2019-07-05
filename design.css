@@ -96,7 +96,7 @@ h1 {
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 100%) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   } 
@@ -114,11 +114,11 @@ h1 {
   }
 
   .navMenuButton.active {
-    color:blue;
+    color:darkblue;
   }
 
   .navMenuButton.active p:hover {
-    color:blue;
+    color:darkblue;
   }
   /*-----------------------*/
 
